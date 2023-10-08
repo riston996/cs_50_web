@@ -1,3 +1,3 @@
-k = ["harry","ron","hermoine"]
+k = ["harry", "ron", "hermoine"]
 for x in k:
     print(x)

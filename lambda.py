@@ -1,8 +1,5 @@
-people = [
-    {"name" : "harry", "house":"gryfindor"},
-    {"name" : "dra", "house":"sly"}
-]
+people = [{"name": "harry", "house": "gryfindor"}, {"name": "dra", "house": "sly"}]
 
-people.sort(key = lambda people: people["name"])
+people.sort(key=lambda people: people["name"])
 
 print(people)
