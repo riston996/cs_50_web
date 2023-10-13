@@ -4,16 +4,21 @@
         <title>Hello</title>
         <script>
             function hello() {
-                if(document.querySelector('h1').innerHTML == 'Hello') {
-                    document.querySelector('h1').innerHTML = 'Goodbye';
+                const heading = document.querySelector('h1');
+                if(heading.innerHTML == 'Hello') {
+                    heading.innerHTML = 'Goodbye';
                 } else {
-                    document.querySelector('h1').innerHTML = 'Hello';
+                    heading.innerHTML = 'Hello';
                 }
                 
             }
 
             function counter() {
                 document.querySelector('h2').innerHTML = parseInt(document.querySelector('h2').innerHTML) + 1;
+            }
+
+            function counterdown() {
+                document.querySelector('h2').innerHTML = parseInt(document.querySelector('h2').innerHTML) - 1;
             }
 
 
@@ -25,5 +30,6 @@
         <h2>4</h2>
         <button onclick="hello()">Click here</button>
         <button onclick="counter()">Count up</button>
+        <button onclick="counterdown()">Count down</button>
     </body>
 </html>
