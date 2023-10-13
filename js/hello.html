@@ -4,7 +4,16 @@
         <title>Hello</title>
         <script>
             function hello() {
-                alert('hello, world');
+                if(document.querySelector('h1').innerHTML == 'Hello') {
+                    document.querySelector('h1').innerHTML = 'Goodbye';
+                } else {
+                    document.querySelector('h1').innerHTML = 'Hello';
+                }
+                
+            }
+
+            function counter() {
+                document.querySelector('h2').innerHTML = parseInt(document.querySelector('h2').innerHTML) + 1;
             }
 
 
@@ -13,6 +22,8 @@
     </head>
     <body>
         <h1>Hello</h1>
+        <h2>4</h2>
         <button onclick="hello()">Click here</button>
+        <button onclick="counter()">Count up</button>
     </body>
 </html>
