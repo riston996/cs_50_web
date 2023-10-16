@@ -38,6 +38,11 @@ function check() {
         //alert(`The answer is correct`);
         scr++;
         document.querySelector('#score').innerHTML = scr;
+        if (scr > 9) {
+            alert(`You win`);
+            scr = 0;
+            document.querySelector('#score').innerHTML = scr;
+        } 
     } else {
         //alert(`The answer is wrong`);
         lives--;
@@ -60,15 +65,16 @@ function checkIfTwoDigits() {
 }
 
 function game() {
-
     if (lives < 1) {
         alert(`Game over`);
+        lives = 5;
+        document.querySelector('#lives').innerHTML = lives;
     } 
     
 }
 
 function random() {
-
+color();
 const min = 1;
 const max = 11;
 const randomInteger1 = Math.floor(Math.random() * (max - min)) + min;
@@ -92,5 +98,6 @@ document.addEventListener('DOMContentLoaded',function() {
     document.querySelector('#changeBackground').onclick = color;
     document.querySelector('#rand').onclick = random;
     document.querySelector('#check').onclick = check;
+    random();
 })
 
