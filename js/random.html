@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Randomiser</title>
+        <script src="random.js"></script>
+        <style id="dynamicStyle">
+            body {
+                background: blue;
+                background-size: cover !important;
+                color: #FFF !important; /* Text color */
+                font-family: Arial, sans-serif !important;
+                text-align: center !important;
+                padding: 20px !important;
+                margin: 0; /* Remove default margin to ensure full-width layout */
+                height: 100vh; 
+            }
+        
+            h1 {
+                font-size: 2rem !important;
+            }
+        
+            p {
+                font-size: 1.2rem !important;
+            }
+        
+            div {
+                display: flex !important;
+                flex-direction: column !important; /* Align items vertically */
+                justify-content: center !important; /* Center horizontally */
+                align-items: center !important; /* Center vertically */
+            }
+        
+            /* Add some spacing to the button elements */
+            button {
+                margin: 5px !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>Welcome to Randomiser</p>
+            <p>A simple app to polish your maths skills</p>
+            <h1>0</h1>
+        </div>
+        <div>
+            <button id="rand">Randomiser</button>
+            <button id="check">check</button>
+            <button id="changeBackground">Change Background Color</button>
+        </div>
+        <div>
+            <input id = "num" type="number" oninput="checkIfTwoDigits()">
+        </div>
+        <div>
+            <h2>The score is</h2>
+            <h2 id="score">0</h2>
+            <h2>The Lives left is</h2>
+            <h2 id="lives">5</h2>
+        </div>
+    </body>
+</html>

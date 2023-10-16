@@ -34,18 +34,29 @@ function div_2() {
 
 function check() {
 
-    if (counter == parseInt(document.querySelector('#num').value)) {
-        alert(`The answer is correct`);
+    if (ans == parseInt(document.querySelector('#num').value)) {
+        //alert(`The answer is correct`);
         scr++;
         document.querySelector('#score').innerHTML = scr;
     } else {
-        alert(`The answer is wrong`);
+        //alert(`The answer is wrong`);
         lives--;
         document.querySelector('#lives').innerHTML = lives;
         game();
     }
-    document.querySelector('h1').innerHTML = counter;
+    random();
     
+}
+
+function checkIfTwoDigits() {
+    const inputElement = document.querySelector('#num');
+    const userInput = inputElement.value;
+
+    // Check if the input has two digits
+    if (userInput.length === 2 && /^\d+$/.test(userInput)) {
+        check(); // Trigger the check function
+        inputElement.value = ''; // Clear the input for the next guess
+    }
 }
 
 function game() {
@@ -68,11 +79,18 @@ document.querySelector('h1').innerHTML = `${randomInteger1} + ${randomInteger2} 
     
 }
 
+function color() {
+    console.log("start function");
+    // Generate a random color
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+    // Apply the new background color
+    document.body.style.backgroundColor = randomColor;
+}
+
 document.addEventListener('DOMContentLoaded',function() {
-    document.querySelector('button').onclick = count;
-    document.querySelector('#down').onclick = count_down;
-    document.querySelector('#times2').onclick = mul_2;
-    document.querySelector('#div2').onclick = div_2;
+    document.querySelector('#changeBackground').onclick = color;
+    document.querySelector('#rand').onclick = random;
     document.querySelector('#check').onclick = check;
 })
 

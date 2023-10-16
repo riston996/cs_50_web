@@ -3,10 +3,39 @@
     <head>
         <title>Counter</title>
         <script src="counter.js"></script>
-    
+        <style>
+            div {
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        /* Add some spacing to the button elements */
+        button {
+            margin: 5px;
+        }
+        </style>
     </head>
     <body>
-        <h1>0</h1>
-        <button>Count</button>
+        <div>
+            <h1>0</h1>
+        </div>
+        <div>
+            <button>Count Up</button>
+            <button id="down">Count Down</button>
+            <button id="times2">multiply 2</button>
+            <button id="div2">divide 2</button>
+        </div>
+        <div>
+            <button id="check">check</button>
+            <input id = "num" type="number">
+        </div>
+        <div>
+            <h2>The score is</h2>
+            <h2 id="score">0</h2>
+            <h2>The Lives left is</h2>
+            <h2 id="lives">5</h2>
+        </div>
     </body>
 </html>
