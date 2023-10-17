@@ -1,36 +1,8 @@
+const startTime = new Date();
 let counter = 0;
 let scr = 0;
 let lives = 5;
 let ans = 0;
-function count() {
-    counter++; 
-    document.querySelector('h1').innerHTML = counter;
-    if (counter % 10 === 0) {
-        alert(`The value of counter is: ${counter}`);
-    }
-}
-
-function count_down() {
-    counter--; 
-    document.querySelector('h1').innerHTML = counter;
-    if (counter % 10 === 0) {
-        alert(`The value of counter is: ${counter}`);
-    }
-}
-
-function mul_2() {
-    counter = counter * 2 ; 
-    document.querySelector('h1').innerHTML = counter;
-    check();
-    
-}
-
-function div_2() {
-    counter = counter / 2 ; 
-    document.querySelector('h1').innerHTML = counter;
-    check();
-    
-}
 
 function check() {
 
@@ -39,7 +11,14 @@ function check() {
         scr++;
         document.querySelector('#score').innerHTML = scr;
         if (scr > 9) {
-            alert(`You win`);
+            
+            const endTime = new Date();
+            // Calculate the time difference in milliseconds
+            const timeDifference = endTime - startTime;
+
+            // Convert the time difference to seconds (optional)
+            const timeInSeconds = timeDifference / 1000;
+            alert(`You win in in ${timeDifference} milliseconds (${timeInSeconds} seconds).`);
             scr = 0;
             document.querySelector('#score').innerHTML = scr;
         } 
@@ -74,14 +53,14 @@ function game() {
 }
 
 function random() {
-color();
-const min = 1;
-const max = 11;
-const randomInteger1 = Math.floor(Math.random() * (max - min)) + min;
-const randomInteger2 = Math.floor(Math.random() * (max - min)) + min;
-console.log(`${randomInteger1} + ${randomInteger2} = `);
-ans = randomInteger1 + randomInteger2;
-document.querySelector('h1').innerHTML = `${randomInteger1} + ${randomInteger2} = `;
+    color();
+    const min = 1;
+    const max = 11;
+    const randomInteger1 = Math.floor(Math.random() * (max - min)) + min;
+    const randomInteger2 = Math.floor(Math.random() * (max - min)) + min;
+    console.log(`${randomInteger1} + ${randomInteger2} = `);
+    ans = randomInteger1 + randomInteger2;
+    document.querySelector('h1').innerHTML = `${randomInteger1} + ${randomInteger2} = `;
     
 }
 
