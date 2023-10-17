@@ -1,13 +1,18 @@
-let counter = 0;
+if(!localStorage.getItem('counter')) {
+    localStorage.setItem('counter',0);
+} 
+
 let scr = 0;
 let lives = 5;
 let ans = 0;
 function count() {
+    let counter = localStorage.getItem('counter');
     counter++; 
     document.querySelector('h1').innerHTML = counter;
-    if (counter % 10 === 0) {
+    localStorage.setItem('counter',counter);
+    /*if (counter % 10 === 0) {
         alert(`The value of counter is: ${counter}`);
-    }
+    }*/
 }
 
 function count_down() {
@@ -69,6 +74,7 @@ document.querySelector('h1').innerHTML = `${randomInteger1} + ${randomInteger2} 
 }
 
 document.addEventListener('DOMContentLoaded',function() {
+    document.querySelector('h1').innerHTML = localStorage.getItem('counter');
     document.querySelector('button').onclick = count;
     document.querySelector('#down').onclick = count_down;
     document.querySelector('#times2').onclick = mul_2;
