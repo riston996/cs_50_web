@@ -32,10 +32,10 @@ const pag = (
 );
 
 const rootDiv = document.getElementById("root");
-const newDiv = document.createElement('div');
-newDiv.textContent = 'This is a new div element.';
-const newDiv2 = document.createElement('div');
-newDiv2.textContent = 'This is also a new div element.';
+const dp = document.createElement('div');
+dp.style.width = '50%';
+dp.style.margin = '0 auto';
+dp.style.textAlign = 'center';
 const h12 = document.createElement('h1');
 h12.textContent = 'Ignoz AI.';
 const h21 = document.createElement('h2');
@@ -61,13 +61,12 @@ pd.style.width = '50%';
 pd.style.margin = '0 auto';
 pd.style.textAlign = 'center';
 
+dp.appendChild(h12);
+dp.appendChild(h21);
+dp.appendChild(ol);
 pd.appendChild(p1);
 
 
-rootDiv.appendChild(newDiv);
-rootDiv.appendChild(newDiv2);
-rootDiv.appendChild(h12);
-rootDiv.appendChild(h21);
-rootDiv.appendChild(ol);
+rootDiv.appendChild(dp);
 rootDiv.appendChild(pd);
 
