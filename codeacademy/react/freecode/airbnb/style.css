@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+width: 2000px;
+height: 70px;
+box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); /* Add a shadow to the bottom */
+
+}
+
+.nav--icon {
+    width: 82.02px;
+    height: 25.35px;
+    margin-top: 20px;
+    margin-left: 20px;
+    top: 22px;
+    left: 30px;
+    padding: 0px, 0.01px, 0px, 0.01px;
+    margin-left: 4%;
+}
+
+.hero--icon {
+    
+    height: 500px;
+    top: 96px;
+    left: 77px;
+    border-radius: 8.95px;
+    margin-left: 25%;
+    margin-top: 10%;
+
+}
+
+.hero--title {
+margin-left: 5%;
+font-family: Poppins;
+font-size: 36px;
+font-weight: 600;
+line-height: 40px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+.hero--text {
+margin-left: 5%;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 300;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;    
+}
