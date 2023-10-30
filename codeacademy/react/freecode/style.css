@@ -1,0 +1,45 @@
+.nav-items {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin: 0 10px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Apply shadow only to the bottom */
+}
+
+.nav-img {
+    width: 60px ;
+}
+
+.Main_content {
+    
+    align-items: center; /* Center children vertically */
+    flex: 1; 
+    text-align: center; /* Center the text within MainContent */
+}
+
+.footer {
+    background-color: grey;
+    padding: 10px; /* Add padding to the footer */
+    
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+ol {
+    list-style-type: inside;
+    padding-left: 0; /* Remove the default left padding to align text properly */
+}
+
+
